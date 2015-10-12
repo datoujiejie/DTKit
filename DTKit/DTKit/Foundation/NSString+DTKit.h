@@ -76,6 +76,11 @@
 - (NSString *)dt_base64Encoding;
 
 /**
+ Returns an NSData for base64 decoded.
+ */
+- (NSData *)dt_base64Decoding;
+
+/**
  Returns an NSString from base64 encoded string.
  @param base64Encoding The encoded string.
  */

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2142CBB01BCA5AAC0018FE11 /* NSData+CommonCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2142CBAE1BCA5AAC0018FE11 /* NSData+CommonCryptor.h */; settings = {ASSET_TAGS = (); }; };
+		2142CBB11BCA5AAC0018FE11 /* NSData+CommonCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142CBAF1BCA5AAC0018FE11 /* NSData+CommonCryptor.m */; settings = {ASSET_TAGS = (); }; };
+		2142CBB41BCA61010018FE11 /* NSData+Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 2142CBB21BCA61010018FE11 /* NSData+Hash.h */; settings = {ASSET_TAGS = (); }; };
+		2142CBB51BCA61010018FE11 /* NSData+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142CBB31BCA61010018FE11 /* NSData+Hash.m */; settings = {ASSET_TAGS = (); }; };
+		2142CBB81BCA619F0018FE11 /* NSString+CommonCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2142CBB61BCA619F0018FE11 /* NSString+CommonCryptor.h */; settings = {ASSET_TAGS = (); }; };
+		2142CBB91BCA619F0018FE11 /* NSString+CommonCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142CBB71BCA619F0018FE11 /* NSString+CommonCryptor.m */; settings = {ASSET_TAGS = (); }; };
 		214412841B92A4F900B07242 /* DTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 214412831B92A4F900B07242 /* DTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2144128A1B92A4FA00B07242 /* DTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2144127E1B92A4F900B07242 /* DTKit.framework */; };
 		214412911B92A4FA00B07242 /* DTKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 214412901B92A4FA00B07242 /* DTKitTests.m */; };
@@ -37,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2142CBAE1BCA5AAC0018FE11 /* NSData+CommonCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCryptor.h"; sourceTree = "<group>"; };
+		2142CBAF1BCA5AAC0018FE11 /* NSData+CommonCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCryptor.m"; sourceTree = "<group>"; };
+		2142CBB21BCA61010018FE11 /* NSData+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Hash.h"; sourceTree = "<group>"; };
+		2142CBB31BCA61010018FE11 /* NSData+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hash.m"; sourceTree = "<group>"; };
+		2142CBB61BCA619F0018FE11 /* NSString+CommonCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CommonCryptor.h"; sourceTree = "<group>"; };
+		2142CBB71BCA619F0018FE11 /* NSString+CommonCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CommonCryptor.m"; sourceTree = "<group>"; };
 		2144127E1B92A4F900B07242 /* DTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		214412821B92A4F900B07242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		214412831B92A4F900B07242 /* DTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTKit.h; sourceTree = "<group>"; };
@@ -79,6 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2142CBAD1BCA5A880018FE11 /* Cryptor */ = {
+			isa = PBXGroup;
+			children = (
+				2142CBAE1BCA5AAC0018FE11 /* NSData+CommonCryptor.h */,
+				2142CBAF1BCA5AAC0018FE11 /* NSData+CommonCryptor.m */,
+				2142CBB21BCA61010018FE11 /* NSData+Hash.h */,
+				2142CBB31BCA61010018FE11 /* NSData+Hash.m */,
+				2142CBB61BCA619F0018FE11 /* NSString+CommonCryptor.h */,
+				2142CBB71BCA619F0018FE11 /* NSString+CommonCryptor.m */,
+			);
+			path = Cryptor;
+			sourceTree = "<group>";
+		};
 		214412741B92A4F900B07242 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +128,7 @@
 			children = (
 				214412831B92A4F900B07242 /* DTKit.h */,
 				214412B21B92B54F00B07242 /* DTKitMacro.h */,
+				2142CBAD1BCA5A880018FE11 /* Cryptor */,
 				214412BF1B92E01A00B07242 /* UIKit */,
 				214412A31B92A68700B07242 /* Foundation */,
 				214412811B92A4F900B07242 /* Supporting Files */,
@@ -183,7 +209,10 @@
 				214412AA1B92AB5800B07242 /* NSData+DTKit.h in Headers */,
 				214412C21B92E02F00B07242 /* UIColor+DTKit.h in Headers */,
 				214412B31B92B65A00B07242 /* DTKitMacro.h in Headers */,
+				2142CBB01BCA5AAC0018FE11 /* NSData+CommonCryptor.h in Headers */,
+				2142CBB81BCA619F0018FE11 /* NSString+CommonCryptor.h in Headers */,
 				214412841B92A4F900B07242 /* DTKit.h in Headers */,
+				2142CBB41BCA61010018FE11 /* NSData+Hash.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +314,13 @@
 			files = (
 				214412AF1B92AFDD00B07242 /* NSString+DTKit.m in Sources */,
 				214412BB1B92B99600B07242 /* NSNumber+DTKit.m in Sources */,
+				2142CBB51BCA61010018FE11 /* NSData+Hash.m in Sources */,
 				214412A71B92A69900B07242 /* NSArray+DTKit.m in Sources */,
 				214412B71B92B90200B07242 /* NSCharacterSet+DTKit.m in Sources */,
 				214412C31B92E02F00B07242 /* UIColor+DTKit.m in Sources */,
 				214412AB1B92AB5800B07242 /* NSData+DTKit.m in Sources */,
+				2142CBB91BCA619F0018FE11 /* NSString+CommonCryptor.m in Sources */,
+				2142CBB11BCA5AAC0018FE11 /* NSData+CommonCryptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +510,7 @@
 				214412961B92A4FA00B07242 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		214412971B92A4FA00B07242 /* Build configuration list for PBXNativeTarget "DTKitTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +519,7 @@
 				214412991B92A4FA00B07242 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
