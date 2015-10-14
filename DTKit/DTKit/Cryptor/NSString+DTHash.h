@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Hash)
+@interface NSString (DTHash)
 #pragma mark - Hash
 ///=============================================================================
 /// @name Hash

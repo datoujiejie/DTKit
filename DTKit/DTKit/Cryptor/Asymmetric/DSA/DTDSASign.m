@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 traveksky. All rights reserved.
 //
 
-#import "DSASign.h"
+#import "DTDSASign.h"
 #import <openssl/dsa.h>
 #import <openssl/md5.h>
 #import <openssl/sha.h>
 #import <openssl/pem.h>
 
-@interface DSASign ()
+@interface DTDSASign ()
 {
     DSA *_publicDSAKey;
     DSA *_privateDSAKey;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation DSASign
+@implementation DTDSASign
 
 - (id)initWithPrivateKey:(NSString *)privateKey
                publicKey:(NSString *)publicKey {

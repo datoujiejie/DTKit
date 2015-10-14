@@ -6,12 +6,12 @@
 //  Copyright © 2015年 datoujiejie. All rights reserved.
 //
 
-#import "NSData+CommonCryptor.h"
+#import "NSData+DTCommonCryptor.h"
 #import <CommonCrypto/CommonCryptor.h>
 
-NSString *const kCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
+NSString *const kDTCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
 
-@implementation NSData (CommonCryptor)
+@implementation NSData (DTCommonCryptor)
 
 static void DTFixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutableData *ivData)
 {
@@ -388,7 +388,7 @@ static void DTFixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMut
         [userInfo setObject:reason forKey:NSLocalizedFailureReasonErrorKey];
     }
     
-    NSError *result = [NSError errorWithDomain:kCommonCryptoErrorDomain
+    NSError *result = [NSError errorWithDomain:kDTCommonCryptoErrorDomain
                                           code:status
                                       userInfo:userInfo];
     

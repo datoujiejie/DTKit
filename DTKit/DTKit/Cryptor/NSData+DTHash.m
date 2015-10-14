@@ -6,11 +6,11 @@
 //  Copyright © 2015年 datoujiejie. All rights reserved.
 //
 
-#import "NSData+Hash.h"
+#import "NSData+DTHash.h"
 #include <CommonCrypto/CommonCrypto.h>
 #include <zlib.h>
 
-@implementation NSData (Hash)
+@implementation NSData (DTHash)
 - (NSString *)dt_md2String {
     unsigned char result[CC_MD2_DIGEST_LENGTH];
     CC_MD2(self.bytes, (CC_LONG)self.length, result);

@@ -13,7 +13,7 @@ typedef enum {
     DSATypePrivate
 }DSAType;
 
-@interface DSASign : NSObject
+@interface DTDSASign : NSObject
 /*!
  @property
  @abstract 私钥

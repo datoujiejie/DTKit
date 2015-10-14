@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (CommonCryptor)
+@interface NSString (DTCommonCryptor)
 /*!
  @method
  @abstract AES加密
@@ -21,8 +21,8 @@
  @return 加密后数据，base64编码
  */
 - (NSString *)dt_AESEncryptedDataUsingKey:(id)key
-                                  iv:(id)iv
-                               error:(NSError **)error;
+                                       iv:(id)iv
+                                    error:(NSError **)error;
 /*!
  @method
  @abstract AES解密
@@ -35,8 +35,8 @@
  @return 解密后数据，utf-8编码
  */
 - (NSString *)dt_AESDecryptedDataUsingKey:(id)key
-                                  iv:(id)iv
-                               error:(NSError **)error;
+                                       iv:(id)iv
+                                    error:(NSError **)error;
 
 /*!
  @method
@@ -50,8 +50,8 @@
  @return 加密后数据，base64编码
  */
 - (NSString *)dt_DESEncryptedDataUsingKey:(id)key
-                                  iv:(id)iv
-                               error:(NSError **)error;
+                                       iv:(id)iv
+                                    error:(NSError **)error;
 /*!
  @method
  @abstract 3DES加密
@@ -64,6 +64,6 @@
  @return 加密后数据，base64编码
  */
 - (NSString *)dt_DESDecryptedDataUsingKey:(id)key
-                                  iv:(id)iv
-                               error:(NSError **)error;
+                                       iv:(id)iv
+                                    error:(NSError **)error;
 @end

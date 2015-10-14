@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2142CBB01BCA5AAC0018FE11 /* NSData+CommonCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2142CBAE1BCA5AAC0018FE11 /* NSData+CommonCryptor.h */; settings = {ASSET_TAGS = (); }; };
-		2142CBB11BCA5AAC0018FE11 /* NSData+CommonCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142CBAF1BCA5AAC0018FE11 /* NSData+CommonCryptor.m */; settings = {ASSET_TAGS = (); }; };
-		2142CBB41BCA61010018FE11 /* NSData+Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 2142CBB21BCA61010018FE11 /* NSData+Hash.h */; settings = {ASSET_TAGS = (); }; };
-		2142CBB51BCA61010018FE11 /* NSData+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142CBB31BCA61010018FE11 /* NSData+Hash.m */; settings = {ASSET_TAGS = (); }; };
-		2142CBB81BCA619F0018FE11 /* NSString+CommonCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2142CBB61BCA619F0018FE11 /* NSString+CommonCryptor.h */; settings = {ASSET_TAGS = (); }; };
-		2142CBB91BCA619F0018FE11 /* NSString+CommonCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142CBB71BCA619F0018FE11 /* NSString+CommonCryptor.m */; settings = {ASSET_TAGS = (); }; };
+		2142CBB01BCA5AAC0018FE11 /* NSData+DTCommonCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2142CBAE1BCA5AAC0018FE11 /* NSData+DTCommonCryptor.h */; settings = {ASSET_TAGS = (); }; };
+		2142CBB11BCA5AAC0018FE11 /* NSData+DTCommonCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142CBAF1BCA5AAC0018FE11 /* NSData+DTCommonCryptor.m */; settings = {ASSET_TAGS = (); }; };
+		2142CBB41BCA61010018FE11 /* NSData+DTHash.h in Headers */ = {isa = PBXBuildFile; fileRef = 2142CBB21BCA61010018FE11 /* NSData+DTHash.h */; settings = {ASSET_TAGS = (); }; };
+		2142CBB51BCA61010018FE11 /* NSData+DTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142CBB31BCA61010018FE11 /* NSData+DTHash.m */; settings = {ASSET_TAGS = (); }; };
+		2142CBB81BCA619F0018FE11 /* NSString+DTCommonCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2142CBB61BCA619F0018FE11 /* NSString+DTCommonCryptor.h */; settings = {ASSET_TAGS = (); }; };
+		2142CBB91BCA619F0018FE11 /* NSString+DTCommonCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142CBB71BCA619F0018FE11 /* NSString+DTCommonCryptor.m */; settings = {ASSET_TAGS = (); }; };
 		214412841B92A4F900B07242 /* DTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 214412831B92A4F900B07242 /* DTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2144128A1B92A4FA00B07242 /* DTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2144127E1B92A4F900B07242 /* DTKit.framework */; };
 		214412911B92A4FA00B07242 /* DTKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 214412901B92A4FA00B07242 /* DTKitTests.m */; };
@@ -30,8 +30,8 @@
 		214412BE1B92DF2D00B07242 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 214412BD1B92DF2D00B07242 /* libz.dylib */; };
 		214412C21B92E02F00B07242 /* UIColor+DTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 214412C01B92E02F00B07242 /* UIColor+DTKit.h */; };
 		214412C31B92E02F00B07242 /* UIColor+DTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 214412C11B92E02F00B07242 /* UIColor+DTKit.m */; };
-		E18E59811BCDE73700FF5FD4 /* NSString+Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E597F1BCDE73700FF5FD4 /* NSString+Hash.h */; settings = {ASSET_TAGS = (); }; };
-		E18E59821BCDE73700FF5FD4 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = E18E59801BCDE73700FF5FD4 /* NSString+Hash.m */; settings = {ASSET_TAGS = (); }; };
+		E18E59811BCDE73700FF5FD4 /* NSString+DTHash.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E597F1BCDE73700FF5FD4 /* NSString+DTHash.h */; settings = {ASSET_TAGS = (); }; };
+		E18E59821BCDE73700FF5FD4 /* NSString+DTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = E18E59801BCDE73700FF5FD4 /* NSString+DTHash.m */; settings = {ASSET_TAGS = (); }; };
 		E18E5A391BCDEC8E00FF5FD4 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E59921BCDEC8E00FF5FD4 /* aes.h */; settings = {ASSET_TAGS = (); }; };
 		E18E5A3A1BCDEC8E00FF5FD4 /* asn1.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E59931BCDEC8E00FF5FD4 /* asn1.h */; settings = {ASSET_TAGS = (); }; };
 		E18E5A3B1BCDEC8E00FF5FD4 /* asn1_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E59941BCDEC8E00FF5FD4 /* asn1_mac.h */; settings = {ASSET_TAGS = (); }; };
@@ -111,8 +111,8 @@
 		E18E5A851BCDEC8E00FF5FD4 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E18E59DE1BCDEC8E00FF5FD4 /* libssl.a */; settings = {ASSET_TAGS = (); }; };
 		E18E5AD41BCDEC8E00FF5FD4 /* DTRSA.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E5A311BCDEC8E00FF5FD4 /* DTRSA.h */; settings = {ASSET_TAGS = (); }; };
 		E18E5AD51BCDEC8E00FF5FD4 /* DTRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = E18E5A321BCDEC8E00FF5FD4 /* DTRSA.m */; settings = {ASSET_TAGS = (); }; };
-		E18E5AD91BCDFDDC00FF5FD4 /* DSASign.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E5AD71BCDFDDC00FF5FD4 /* DSASign.h */; settings = {ASSET_TAGS = (); }; };
-		E18E5ADA1BCDFDDC00FF5FD4 /* DSASign.m in Sources */ = {isa = PBXBuildFile; fileRef = E18E5AD81BCDFDDC00FF5FD4 /* DSASign.m */; settings = {ASSET_TAGS = (); }; };
+		E18E5AD91BCDFDDC00FF5FD4 /* DTDSASign.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E5AD71BCDFDDC00FF5FD4 /* DTDSASign.h */; settings = {ASSET_TAGS = (); }; };
+		E18E5ADA1BCDFDDC00FF5FD4 /* DTDSASign.m in Sources */ = {isa = PBXBuildFile; fileRef = E18E5AD81BCDFDDC00FF5FD4 /* DTDSASign.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,12 +126,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2142CBAE1BCA5AAC0018FE11 /* NSData+CommonCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCryptor.h"; sourceTree = "<group>"; };
-		2142CBAF1BCA5AAC0018FE11 /* NSData+CommonCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCryptor.m"; sourceTree = "<group>"; };
-		2142CBB21BCA61010018FE11 /* NSData+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Hash.h"; sourceTree = "<group>"; };
-		2142CBB31BCA61010018FE11 /* NSData+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hash.m"; sourceTree = "<group>"; };
-		2142CBB61BCA619F0018FE11 /* NSString+CommonCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CommonCryptor.h"; sourceTree = "<group>"; };
-		2142CBB71BCA619F0018FE11 /* NSString+CommonCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CommonCryptor.m"; sourceTree = "<group>"; };
+		2142CBAE1BCA5AAC0018FE11 /* NSData+DTCommonCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DTCommonCryptor.h"; sourceTree = "<group>"; };
+		2142CBAF1BCA5AAC0018FE11 /* NSData+DTCommonCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DTCommonCryptor.m"; sourceTree = "<group>"; };
+		2142CBB21BCA61010018FE11 /* NSData+DTHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DTHash.h"; sourceTree = "<group>"; };
+		2142CBB31BCA61010018FE11 /* NSData+DTHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DTHash.m"; sourceTree = "<group>"; };
+		2142CBB61BCA619F0018FE11 /* NSString+DTCommonCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DTCommonCryptor.h"; sourceTree = "<group>"; };
+		2142CBB71BCA619F0018FE11 /* NSString+DTCommonCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DTCommonCryptor.m"; sourceTree = "<group>"; };
 		2144127E1B92A4F900B07242 /* DTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		214412821B92A4F900B07242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		214412831B92A4F900B07242 /* DTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTKit.h; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 		214412BD1B92DF2D00B07242 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		214412C01B92E02F00B07242 /* UIColor+DTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DTKit.h"; sourceTree = "<group>"; };
 		214412C11B92E02F00B07242 /* UIColor+DTKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DTKit.m"; sourceTree = "<group>"; };
-		E18E597F1BCDE73700FF5FD4 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		E18E59801BCDE73700FF5FD4 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		E18E597F1BCDE73700FF5FD4 /* NSString+DTHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DTHash.h"; sourceTree = "<group>"; };
+		E18E59801BCDE73700FF5FD4 /* NSString+DTHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DTHash.m"; sourceTree = "<group>"; };
 		E18E59921BCDEC8E00FF5FD4 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 		E18E59931BCDEC8E00FF5FD4 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
 		E18E59941BCDEC8E00FF5FD4 /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
@@ -233,8 +233,8 @@
 		E18E59DE1BCDEC8E00FF5FD4 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		E18E5A311BCDEC8E00FF5FD4 /* DTRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRSA.h; sourceTree = "<group>"; };
 		E18E5A321BCDEC8E00FF5FD4 /* DTRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRSA.m; sourceTree = "<group>"; };
-		E18E5AD71BCDFDDC00FF5FD4 /* DSASign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSASign.h; sourceTree = "<group>"; };
-		E18E5AD81BCDFDDC00FF5FD4 /* DSASign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSASign.m; sourceTree = "<group>"; };
+		E18E5AD71BCDFDDC00FF5FD4 /* DTDSASign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDSASign.h; sourceTree = "<group>"; };
+		E18E5AD81BCDFDDC00FF5FD4 /* DTDSASign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTDSASign.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,10 +363,10 @@
 		E18E59831BCDE92100FF5FD4 /* CommonCryptor */ = {
 			isa = PBXGroup;
 			children = (
-				2142CBAE1BCA5AAC0018FE11 /* NSData+CommonCryptor.h */,
-				2142CBAF1BCA5AAC0018FE11 /* NSData+CommonCryptor.m */,
-				2142CBB61BCA619F0018FE11 /* NSString+CommonCryptor.h */,
-				2142CBB71BCA619F0018FE11 /* NSString+CommonCryptor.m */,
+				2142CBAE1BCA5AAC0018FE11 /* NSData+DTCommonCryptor.h */,
+				2142CBAF1BCA5AAC0018FE11 /* NSData+DTCommonCryptor.m */,
+				2142CBB61BCA619F0018FE11 /* NSString+DTCommonCryptor.h */,
+				2142CBB71BCA619F0018FE11 /* NSString+DTCommonCryptor.m */,
 			);
 			name = CommonCryptor;
 			sourceTree = "<group>";
@@ -374,10 +374,10 @@
 		E18E59841BCDE95300FF5FD4 /* Hash */ = {
 			isa = PBXGroup;
 			children = (
-				2142CBB21BCA61010018FE11 /* NSData+Hash.h */,
-				2142CBB31BCA61010018FE11 /* NSData+Hash.m */,
-				E18E597F1BCDE73700FF5FD4 /* NSString+Hash.h */,
-				E18E59801BCDE73700FF5FD4 /* NSString+Hash.m */,
+				2142CBB21BCA61010018FE11 /* NSData+DTHash.h */,
+				2142CBB31BCA61010018FE11 /* NSData+DTHash.m */,
+				E18E597F1BCDE73700FF5FD4 /* NSString+DTHash.h */,
+				E18E59801BCDE73700FF5FD4 /* NSString+DTHash.m */,
 			);
 			name = Hash;
 			sourceTree = "<group>";
@@ -504,8 +504,8 @@
 		E18E5AD61BCDFDB000FF5FD4 /* DSA */ = {
 			isa = PBXGroup;
 			children = (
-				E18E5AD71BCDFDDC00FF5FD4 /* DSASign.h */,
-				E18E5AD81BCDFDDC00FF5FD4 /* DSASign.m */,
+				E18E5AD71BCDFDDC00FF5FD4 /* DTDSASign.h */,
+				E18E5AD81BCDFDDC00FF5FD4 /* DTDSASign.m */,
 			);
 			path = DSA;
 			sourceTree = "<group>";
@@ -551,7 +551,7 @@
 				E18E5A711BCDEC8E00FF5FD4 /* seed.h in Headers */,
 				E18E5A411BCDEC8E00FF5FD4 /* camellia.h in Headers */,
 				E18E5A7A1BCDEC8E00FF5FD4 /* symhacks.h in Headers */,
-				E18E59811BCDE73700FF5FD4 /* NSString+Hash.h in Headers */,
+				E18E59811BCDE73700FF5FD4 /* NSString+DTHash.h in Headers */,
 				E18E5A7E1BCDEC8E00FF5FD4 /* ui.h in Headers */,
 				E18E5A751BCDEC8E00FF5FD4 /* ssl.h in Headers */,
 				E18E5A651BCDEC8E00FF5FD4 /* ossl_typ.h in Headers */,
@@ -587,8 +587,8 @@
 				E18E5A591BCDEC8E00FF5FD4 /* krb5_asn.h in Headers */,
 				E18E5A4E1BCDEC8E00FF5FD4 /* dtls1.h in Headers */,
 				E18E5A3E1BCDEC8E00FF5FD4 /* blowfish.h in Headers */,
-				2142CBB01BCA5AAC0018FE11 /* NSData+CommonCryptor.h in Headers */,
-				2142CBB81BCA619F0018FE11 /* NSString+CommonCryptor.h in Headers */,
+				2142CBB01BCA5AAC0018FE11 /* NSData+DTCommonCryptor.h in Headers */,
+				2142CBB81BCA619F0018FE11 /* NSString+DTCommonCryptor.h in Headers */,
 				E18E5A731BCDEC8E00FF5FD4 /* srp.h in Headers */,
 				E18E5A7D1BCDEC8E00FF5FD4 /* txt_db.h in Headers */,
 				E18E5A821BCDEC8E00FF5FD4 /* x509_vfy.h in Headers */,
@@ -602,9 +602,9 @@
 				E18E5A541BCDEC8E00FF5FD4 /* engine.h in Headers */,
 				E18E5A5F1BCDEC8E00FF5FD4 /* modes.h in Headers */,
 				E18E5A781BCDEC8E00FF5FD4 /* ssl3.h in Headers */,
-				2142CBB41BCA61010018FE11 /* NSData+Hash.h in Headers */,
+				2142CBB41BCA61010018FE11 /* NSData+DTHash.h in Headers */,
 				E18E5A7F1BCDEC8E00FF5FD4 /* ui_compat.h in Headers */,
-				E18E5AD91BCDFDDC00FF5FD4 /* DSASign.h in Headers */,
+				E18E5AD91BCDFDDC00FF5FD4 /* DTDSASign.h in Headers */,
 				E18E5A451BCDEC8E00FF5FD4 /* comp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,16 +707,16 @@
 			files = (
 				214412AF1B92AFDD00B07242 /* NSString+DTKit.m in Sources */,
 				214412BB1B92B99600B07242 /* NSNumber+DTKit.m in Sources */,
-				2142CBB51BCA61010018FE11 /* NSData+Hash.m in Sources */,
-				E18E59821BCDE73700FF5FD4 /* NSString+Hash.m in Sources */,
+				2142CBB51BCA61010018FE11 /* NSData+DTHash.m in Sources */,
+				E18E59821BCDE73700FF5FD4 /* NSString+DTHash.m in Sources */,
 				214412A71B92A69900B07242 /* NSArray+DTKit.m in Sources */,
 				E18E5AD51BCDEC8E00FF5FD4 /* DTRSA.m in Sources */,
 				214412B71B92B90200B07242 /* NSCharacterSet+DTKit.m in Sources */,
 				214412C31B92E02F00B07242 /* UIColor+DTKit.m in Sources */,
 				214412AB1B92AB5800B07242 /* NSData+DTKit.m in Sources */,
-				E18E5ADA1BCDFDDC00FF5FD4 /* DSASign.m in Sources */,
-				2142CBB91BCA619F0018FE11 /* NSString+CommonCryptor.m in Sources */,
-				2142CBB11BCA5AAC0018FE11 /* NSData+CommonCryptor.m in Sources */,
+				E18E5ADA1BCDFDDC00FF5FD4 /* DTDSASign.m in Sources */,
+				2142CBB91BCA619F0018FE11 /* NSString+DTCommonCryptor.m in Sources */,
+				2142CBB11BCA5AAC0018FE11 /* NSData+DTCommonCryptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

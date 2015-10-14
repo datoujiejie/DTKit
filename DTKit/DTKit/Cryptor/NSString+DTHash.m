@@ -6,10 +6,10 @@
 //  Copyright © 2015年 datoujiejie. All rights reserved.
 //
 
-#import "NSString+Hash.h"
-#import "NSData+Hash.h"
+#import "NSString+DTHash.h"
+#import "NSData+DTHash.h"
 
-@implementation NSString (Hash)
+@implementation NSString (DTHash)
 - (NSString *)dt_md5String {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] dt_md5String];
 }

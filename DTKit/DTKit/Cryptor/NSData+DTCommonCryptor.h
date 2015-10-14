@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 //对称加密
-@interface NSData (CommonCryptor)
+@interface NSData (DTCommonCryptor)
 /*!
  @method
  @abstract AES加密

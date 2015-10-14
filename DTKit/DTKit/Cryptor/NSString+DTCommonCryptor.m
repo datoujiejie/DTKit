@@ -6,12 +6,12 @@
 //  Copyright © 2015年 datoujiejie. All rights reserved.
 //
 
-#import "NSString+CommonCryptor.h"
-#import "NSData+CommonCryptor.h"
+#import "NSString+DTCommonCryptor.h"
+#import "NSData+DTCommonCryptor.h"
 #import "NSData+DTKit.h"
 #import "NSString+DTKit.h"
 
-@implementation NSString (CommonCryptor)
+@implementation NSString (DTCommonCryptor)
 - (NSString *)dt_AESEncryptedDataUsingKey:(id)key
                                     iv:(id)iv
                                  error:(NSError **)error {
