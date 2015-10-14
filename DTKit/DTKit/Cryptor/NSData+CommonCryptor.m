@@ -13,7 +13,7 @@ NSString *const kCommonCryptoErrorDomain = @"CommonCryptoErrorDomain";
 
 @implementation NSData (CommonCryptor)
 
-static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutableData *ivData)
+static void DTFixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutableData *ivData)
 {
     NSUInteger keyLength = [keyData length];
     
@@ -81,13 +81,13 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
 }
 
 #pragma mark AES Cypto
-- (NSData *)AESEncryptedDataUsingKey:(id)key
+- (NSData *)dt_AESEncryptedDataUsingKey:(id)key
                                   iv:(id)iv
                                   error:(NSError **)error
 {
     CCCryptorStatus status = kCCSuccess;
     
-    NSData *result = [self dataEncryptedUsingAlgorithm:kCCAlgorithmAES128
+    NSData *result = [self dt_dataEncryptedUsingAlgorithm:kCCAlgorithmAES128
                                                    key:key
                                   initializationVector:iv
                                                options:kCCOptionPKCS7Padding
@@ -100,19 +100,19 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
     
     if (error != NULL)
     {
-        *error = [self errorWithCCCryptorStatus:status];
+        *error = [self dt_errorWithCCCryptorStatus:status];
     }
     
     return nil;
 }
 
-- (NSData *)AESDecryptedDataUsingKey:(id)key
+- (NSData *)dt_AESDecryptedDataUsingKey:(id)key
                                   iv:(id)iv
                                error:(NSError **)error
 {
     CCCryptorStatus status = kCCSuccess;
     
-    NSData *result = [self dataDecryptedUsingAlgorithm:kCCAlgorithmAES128
+    NSData *result = [self dt_dataDecryptedUsingAlgorithm:kCCAlgorithmAES128
                                                    key:key
                                   initializationVector:iv
                                                options:kCCOptionPKCS7Padding
@@ -125,18 +125,18 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
     
     if (error != NULL)
     {
-        *error = [self errorWithCCCryptorStatus:status];
+        *error = [self dt_errorWithCCCryptorStatus:status];
     }
     
     return nil;
 }
 
 #pragma mark DES Cypto
-- (NSData *)DESEncryptedDataUsingKey:(id)key
+- (NSData *)dt_DESEncryptedDataUsingKey:(id)key
                                   iv:(id)iv
                                error:(NSError **)error {
     CCCryptorStatus status = kCCSuccess;
-    NSData         *result = [self dataEncryptedUsingAlgorithm:kCCAlgorithm3DES
+    NSData         *result = [self dt_dataEncryptedUsingAlgorithm:kCCAlgorithm3DES
                                                            key:key
                                           initializationVector:iv
                                                        options:kCCOptionPKCS7Padding
@@ -149,17 +149,17 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
     
     if (error != NULL)
     {
-        *error = [self errorWithCCCryptorStatus:status];
+        *error = [self dt_errorWithCCCryptorStatus:status];
     }
     
     return nil;
 }
 
-- (NSData *)DESDecryptedDataUsingKey:(id)key
+- (NSData *)dt_DESDecryptedDataUsingKey:(id)key
                                   iv:(id)iv
                                error:(NSError **)error {
     CCCryptorStatus status = kCCSuccess;
-    NSData         *result = [self dataDecryptedUsingAlgorithm:kCCAlgorithm3DES
+    NSData         *result = [self dt_dataDecryptedUsingAlgorithm:kCCAlgorithm3DES
                                                            key:key
                                           initializationVector:iv
                                                        options:kCCOptionPKCS7Padding
@@ -172,14 +172,14 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
     
     if (error != NULL)
     {
-        *error = [self errorWithCCCryptorStatus:status];
+        *error = [self dt_errorWithCCCryptorStatus:status];
     }
     
     return nil;
 }
 
 
-- (NSData *)_runCryptor:(CCCryptorRef)cryptor result:(CCCryptorStatus *)status
+- (NSData *)dt_runCryptor:(CCCryptorRef)cryptor result:(CCCryptorStatus *)status
 {
     size_t bufsize = CCCryptorGetOutputLength(cryptor, (size_t)[self length], true);
     void  *buf = malloc(bufsize);
@@ -213,11 +213,11 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
     return [NSData dataWithBytesNoCopy:buf length:bytesTotal];
 }
 
-- (NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm
-                                    key:(id)key
-                   initializationVector:(id)iv
-                                options:(CCOptions)options
-                                  error:(CCCryptorStatus *)error
+- (NSData *)dt_dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm
+                                       key:(id)key
+                      initializationVector:(id)iv
+                                   options:(CCOptions)options
+                                     error:(CCCryptorStatus *)error
 {
     CCCryptorRef    cryptor = NULL;
     CCCryptorStatus status = kCCSuccess;
@@ -246,7 +246,7 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
     }
     
     // ensure correct lengths for key and iv data, based on algorithms
-    FixKeyLengths(algorithm, keyData, ivData);
+    DTFixKeyLengths(algorithm, keyData, ivData);
     
     status = CCCryptorCreate(kCCEncrypt, algorithm, options,
                              [keyData bytes], [keyData length], [ivData bytes],
@@ -262,7 +262,7 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
         return nil;
     }
     
-    NSData *result = [self _runCryptor:cryptor result:&status];
+    NSData *result = [self dt_runCryptor:cryptor result:&status];
     
     if ((result == nil) && (error != NULL))
     {
@@ -274,11 +274,11 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
     return result;
 }
 
-- (NSData *)dataDecryptedUsingAlgorithm:(CCAlgorithm)algorithm
-                                    key:(id)key         // data or string
-                   initializationVector:(id)iv          // data or string
-                                options:(CCOptions)options
-                                  error:(CCCryptorStatus *)error
+- (NSData *)dt_dataDecryptedUsingAlgorithm:(CCAlgorithm)algorithm
+                                       key:(id)key         // data or string
+                      initializationVector:(id)iv          // data or string
+                                   options:(CCOptions)options
+                                     error:(CCCryptorStatus *)error
 {
     CCCryptorRef    cryptor = NULL;
     CCCryptorStatus status = kCCSuccess;
@@ -307,7 +307,7 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
     }
     
     // ensure correct lengths for key and iv data, based on algorithms
-    FixKeyLengths(algorithm, keyData, ivData);
+    DTFixKeyLengths(algorithm, keyData, ivData);
     
     status = CCCryptorCreate(kCCDecrypt, algorithm, options,
                              [keyData bytes], [keyData length], [ivData bytes],
@@ -323,7 +323,7 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
         return nil;
     }
     
-    NSData *result = [self _runCryptor:cryptor result:&status];
+    NSData *result = [self dt_runCryptor:cryptor result:&status];
     
     if ((result == nil) && (error != NULL))
     {
@@ -335,7 +335,7 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData *keyData, NSMutab
     return result;
 }
 
-- (NSError *)errorWithCCCryptorStatus:(CCCryptorStatus)status
+- (NSError *)dt_errorWithCCCryptorStatus:(CCCryptorStatus)status
 {
     NSString *description = nil, *reason = nil;
     

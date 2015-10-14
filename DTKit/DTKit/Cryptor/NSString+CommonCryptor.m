@@ -12,43 +12,43 @@
 #import "NSString+DTKit.h"
 
 @implementation NSString (CommonCryptor)
-- (NSString *)AESEncryptedDataUsingKey:(id)key
+- (NSString *)dt_AESEncryptedDataUsingKey:(id)key
                                     iv:(id)iv
                                  error:(NSError **)error {
     NSData *sourceData = [self dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *encryptData = [sourceData AESEncryptedDataUsingKey:key
-                                                            iv:iv
-                                                         error:error];
+    NSData *encryptData = [sourceData dt_AESEncryptedDataUsingKey:key
+                                                               iv:iv
+                                                            error:error];
     return [encryptData dt_base64Encoding];
 }
 
-- (NSString *)AESDecryptedDataUsingKey:(id)key
+- (NSString *)dt_AESDecryptedDataUsingKey:(id)key
                                     iv:(id)iv
                                  error:(NSError **)error {
     NSData *encryptData = [self dt_base64Decoding];
-    NSData *decryptData = [encryptData AESDecryptedDataUsingKey:key
-                                                             iv:iv
-                                                          error:error];
+    NSData *decryptData = [encryptData dt_AESDecryptedDataUsingKey:key
+                                                                iv:iv
+                                                             error:error];
     return [decryptData dt_base64Encoding];
 }
 
-- (NSString *)DESEncryptedDataUsingKey:(id)key
+- (NSString *)dt_DESEncryptedDataUsingKey:(id)key
                                     iv:(id)iv
                                  error:(NSError **)error {
     NSData *sourceData = [self dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *encryptData = [sourceData DESEncryptedDataUsingKey:key
-                                                            iv:iv
-                                                         error:error];
+    NSData *encryptData = [sourceData dt_DESEncryptedDataUsingKey:key
+                                                               iv:iv
+                                                            error:error];
     return [encryptData dt_base64Encoding];
 }
 
-- (NSString *)DESDecryptedDataUsingKey:(id)key
+- (NSString *)dt_DESDecryptedDataUsingKey:(id)key
                                     iv:(id)iv
                                  error:(NSError **)error {
     NSData *encryptData = [self dt_base64Decoding];
-    NSData *decryptData = [encryptData DESDecryptedDataUsingKey:key
-                                                             iv:iv
-                                                          error:error];
+    NSData *decryptData = [encryptData dt_DESDecryptedDataUsingKey:key
+                                                                iv:iv
+                                                             error:error];
     return [decryptData dt_base64Encoding];
 }
 
