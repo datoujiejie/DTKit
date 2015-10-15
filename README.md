@@ -2,6 +2,7 @@
 封装了一些常见工具类，目前主要添加了一些加密算法
 
 ##对称加解密
+```
 ###DES：
 //加密
 NSString *encryptStr = [@"string" dt_DESEncryptedDataUsingKey:key
