@@ -11,7 +11,7 @@
 #import "DTKitMacro.h"
 #import "NSNumber+DTKit.h"
 #import "NSCharacterSet+DTKit.h"
-#import "NSData+Hash.h"
+#import "NSData+DTHash.h"
 
 @implementation NSString (DTKit)
 
