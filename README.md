@@ -8,6 +8,7 @@
 NSString *encryptStr = [@"string" dt_DESEncryptedDataUsingKey:key
                                                            iv:iv
                                                         error:&error];
+//解密
 NSString *decryptStr = [encryptStr dt_DESDecryptedDataUsingKey:key
                                                             iv:iv
                                                          error:&error];                                                        
@@ -18,6 +19,7 @@ NSString *decryptStr = [encryptStr dt_DESDecryptedDataUsingKey:key
 NSString *encryptStr = [@"string" dt_AESEncryptedDataUsingKey:key
                                                            iv:iv
                                                         error:&error];
+//解密
 NSString *decryptStr = [encryptStr dt_AESDecryptedDataUsingKey:key
                                                             iv:iv
                                                          error:&error];   
