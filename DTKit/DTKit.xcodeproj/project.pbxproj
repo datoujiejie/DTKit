@@ -30,6 +30,8 @@
 		214412BE1B92DF2D00B07242 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 214412BD1B92DF2D00B07242 /* libz.dylib */; };
 		214412C21B92E02F00B07242 /* UIColor+DTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 214412C01B92E02F00B07242 /* UIColor+DTKit.h */; };
 		214412C31B92E02F00B07242 /* UIColor+DTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 214412C11B92E02F00B07242 /* UIColor+DTKit.m */; };
+		21DF8CDA1BD68DB3005A17ED /* NSDictionary+DTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 21DF8CD81BD68DB3005A17ED /* NSDictionary+DTKit.h */; settings = {ASSET_TAGS = (); }; };
+		21DF8CDB1BD68DB3005A17ED /* NSDictionary+DTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DF8CD91BD68DB3005A17ED /* NSDictionary+DTKit.m */; settings = {ASSET_TAGS = (); }; };
 		E18E59811BCDE73700FF5FD4 /* NSString+DTHash.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E597F1BCDE73700FF5FD4 /* NSString+DTHash.h */; settings = {ASSET_TAGS = (); }; };
 		E18E59821BCDE73700FF5FD4 /* NSString+DTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = E18E59801BCDE73700FF5FD4 /* NSString+DTHash.m */; settings = {ASSET_TAGS = (); }; };
 		E18E5A391BCDEC8E00FF5FD4 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = E18E59921BCDEC8E00FF5FD4 /* aes.h */; settings = {ASSET_TAGS = (); }; };
@@ -152,6 +154,8 @@
 		214412BD1B92DF2D00B07242 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		214412C01B92E02F00B07242 /* UIColor+DTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DTKit.h"; sourceTree = "<group>"; };
 		214412C11B92E02F00B07242 /* UIColor+DTKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DTKit.m"; sourceTree = "<group>"; };
+		21DF8CD81BD68DB3005A17ED /* NSDictionary+DTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DTKit.h"; sourceTree = "<group>"; };
+		21DF8CD91BD68DB3005A17ED /* NSDictionary+DTKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DTKit.m"; sourceTree = "<group>"; };
 		E18E597F1BCDE73700FF5FD4 /* NSString+DTHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DTHash.h"; sourceTree = "<group>"; };
 		E18E59801BCDE73700FF5FD4 /* NSString+DTHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DTHash.m"; sourceTree = "<group>"; };
 		E18E59921BCDEC8E00FF5FD4 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 		214412A31B92A68700B07242 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				21DF8CD81BD68DB3005A17ED /* NSDictionary+DTKit.h */,
+				21DF8CD91BD68DB3005A17ED /* NSDictionary+DTKit.m */,
 				214412A41B92A69900B07242 /* NSArray+DTKit.h */,
 				214412A51B92A69900B07242 /* NSArray+DTKit.m */,
 				214412A81B92AB5800B07242 /* NSData+DTKit.h */,
@@ -557,6 +563,7 @@
 				E18E5A651BCDEC8E00FF5FD4 /* ossl_typ.h in Headers */,
 				E18E5A791BCDEC8E00FF5FD4 /* stack.h in Headers */,
 				E18E5A7C1BCDEC8E00FF5FD4 /* ts.h in Headers */,
+				21DF8CDA1BD68DB3005A17ED /* NSDictionary+DTKit.h in Headers */,
 				E18E5A771BCDEC8E00FF5FD4 /* ssl23.h in Headers */,
 				E18E5A521BCDEC8E00FF5FD4 /* ecdh.h in Headers */,
 				214412AA1B92AB5800B07242 /* NSData+DTKit.h in Headers */,
@@ -714,6 +721,7 @@
 				214412B71B92B90200B07242 /* NSCharacterSet+DTKit.m in Sources */,
 				214412C31B92E02F00B07242 /* UIColor+DTKit.m in Sources */,
 				214412AB1B92AB5800B07242 /* NSData+DTKit.m in Sources */,
+				21DF8CDB1BD68DB3005A17ED /* NSDictionary+DTKit.m in Sources */,
 				E18E5ADA1BCDFDDC00FF5FD4 /* DTDSASign.m in Sources */,
 				2142CBB91BCA619F0018FE11 /* NSString+DTCommonCryptor.m in Sources */,
 				2142CBB11BCA5AAC0018FE11 /* NSData+DTCommonCryptor.m in Sources */,

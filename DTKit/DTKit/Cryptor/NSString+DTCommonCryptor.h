@@ -37,6 +37,19 @@
 - (NSString *)dt_AESDecryptedDataUsingKey:(id)key
                                        iv:(id)iv
                                     error:(NSError **)error;
+/**
+ *  AES加密
+ *
+ *  @return 加密后字符串
+ */
+- (NSString *)dt_AESEncryptedString;
+
+/**
+ *  AES解密
+ *
+ *  @return 解密后字符串
+ */
+- (NSString *)dt_AESDecryptedString;
 
 /*!
  @method

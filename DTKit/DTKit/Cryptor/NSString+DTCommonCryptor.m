@@ -10,8 +10,28 @@
 #import "NSData+DTCommonCryptor.h"
 #import "NSData+DTKit.h"
 #import "NSString+DTKit.h"
+#import "NSString+DTHash.h"
+
+#define kDTKitDefaultKey  @"pa55w0rd"
 
 @implementation NSString (DTCommonCryptor)
+
+- (NSString *)dt_AESEncryptedString {
+    NSString *key = [kDTKitDefaultKey dt_sha256String];
+    NSString *iv = [kDTKitDefaultKey dt_md5String];
+    return [self dt_AESEncryptedDataUsingKey:key
+                                          iv:iv
+                                       error:nil];
+}
+
+- (NSString *)dt_AESDecryptedString {
+    NSString *key = [kDTKitDefaultKey dt_sha256String];
+    NSString *iv = [kDTKitDefaultKey dt_md5String];
+    return [self dt_AESDecryptedDataUsingKey:key
+                                          iv:iv
+                                       error:nil];
+}
+
 - (NSString *)dt_AESEncryptedDataUsingKey:(id)key
                                     iv:(id)iv
                                  error:(NSError **)error {
@@ -29,7 +49,7 @@
     NSData *decryptData = [encryptData dt_AESDecryptedDataUsingKey:key
                                                                 iv:iv
                                                              error:error];
-    return [decryptData dt_base64Encoding];
+    return [[NSString alloc] initWithData:decryptData encoding:NSUTF8StringEncoding];
 }
 
 - (NSString *)dt_DESEncryptedDataUsingKey:(id)key
