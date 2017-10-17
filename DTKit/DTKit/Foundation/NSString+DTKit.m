@@ -76,7 +76,14 @@
 }
 
 - (NSString *)dt_stringByURLEncode {
-    return [self dt_stringByURLEncode:NSUTF8StringEncoding];
+    NSString *encoded = (__bridge_transfer NSString *)
+    CFURLCreateStringByAddingPercentEscapes(
+                                            NULL,
+                                            (__bridge CFStringRef)self,
+                                            NULL,
+                                            CFSTR("!#$&'()*+,/:;=?@[]"),
+                                            kCFStringEncodingUTF8);
+    return encoded;
 }
 
 - (NSString *)dt_stringByURLDecode {
@@ -336,5 +343,31 @@
 
 - (id)dt_jsonValueDecoded {
     return [[self dt_dataValue] dt_jsonValueDecoded];
+}
+
+- (NSString *)dt_firstChar {
+	if (self.length) {
+		NSString *firstStr = [self substringToIndex:1];
+		//判断是否A到Z
+		if ([self isLatin:firstStr]) {
+			return [firstStr uppercaseString];
+		}else {
+			NSMutableString *pinyin = [self mutableCopy];
+			//转换成拼音
+			CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformMandarinLatin, NO);
+			//去掉音标
+			CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformStripDiacritics, NO);
+			if (pinyin.length) {
+				return [[pinyin substringToIndex:1] uppercaseString];
+			}
+		}
+	}
+	return @"#";
+}
+
+- (BOOL)isLatin:(NSString *)str {
+	NSString *format1 = @"[a-zA-Z]{1}"; // 字母和数字的组合
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",format1];
+	return [predicate evaluateWithObject:str];
 }
 @end

@@ -299,4 +299,8 @@
  */
 - (id)dt_jsonValueDecoded;
 
+/**
+ 返回首字母，如果是中文，返回拼音首字母
+ */
+- (NSString *)dt_firstChar;
 @end
